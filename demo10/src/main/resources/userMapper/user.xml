@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hlx.dao.UserDao">
+    <resultMap id="getUserMap" type="com.hlx.entity.User">
+        <id column="name" property="name"/>
+        <result column="password" property="password"/>
+    </resultMap>
+    <resultMap id="getAMap" type="com.hlx.entity.User">
+        <id column="name" property="name"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+    <!--与上一部分mapper内容绑定-->
+    <select id="getUser" resultMap="getUserMap">
+--             select * from T_USER
+            select * from a_user where name = ''
+
+    </select>
+    <select id="getA" resultMap="getAMap">
+--             select * from T_USER
+            select * from a_user where name = 'abc'
+
+    </select>
+
+</mapper>

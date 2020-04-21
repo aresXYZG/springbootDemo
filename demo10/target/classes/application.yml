@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+datasource:
+#  url:localhost:1521:t_user
+  url: 127.0.0.1:3306/test
+
+spring:
+  datasource:
+#    password: 123456
+#    username: system
+#    url: jdbc:oracle:${datasource.url}
+#
+##    url: jdbc:oracle:thin:@(DESCRIPTION =    (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521))    (CONNECT_DATA =      (SERVER = DEDICATED)      (SERVICE_NAME = hlx)    ))
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: hb
+    password: 123456
+#    url: jdbc:mysql://${datasource.url}
+    url: jdbc:mysql://${datasource.url}
+
+
+  main:
+    web-application-type = true
+
+mybatis:
+#  mapper-locations:
+#     classpath:userMapper/*.xml
+  type-aliases-package: com.hlx.entity
+
+
